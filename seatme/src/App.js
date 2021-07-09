@@ -7,6 +7,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 // import firebase from "firebase/app";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import RouteWithSubRoutes from './utils/RouteWithSubRoutes';
+// import Privateroute from "./components/Privateroute"
 
 import "firebase/auth";
 
@@ -15,7 +16,8 @@ function App() {
     <AuthProvider>
       <Router>
         <Switch>
-        <Redirect exact from='/' to='/auth' />
+        <Redirect exact from='/' to='/auth/signup' />
+        {/* <Privateroute exact path='/dashboard' component={Dashboard}/> */}
         {routes.map((route, i) => (
             <RouteWithSubRoutes key={i} {...route} />
         ))}
@@ -26,3 +28,4 @@ function App() {
 }
 
 export default App;
+                                                                

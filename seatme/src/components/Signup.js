@@ -127,9 +127,9 @@
 // export default Signup;
 
 import { useRef, useState } from "react";
-import { Form, Button, Card, Alert} from "react-bootstrap";
+import { Form, Button, Card, Alert } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-import {Link, useHistory} from 'react-router-dom'
+import { Link, useHistory } from "react-router-dom";
 
 export default function Signup() {
   const emailRef = useRef();
@@ -152,8 +152,7 @@ export default function Signup() {
       setError("");
       setLoading(true);
       await signup(emailRef.current.value, passwordRef.current.value);
-      history.push("/dashboard")
-
+      history.push("/dashboard");
     } catch {
       setError("Failed to create an account");
     }
@@ -161,10 +160,10 @@ export default function Signup() {
   }
   return (
     <>
-      <Card id="login-card" className="w-100 bg-dark">
+      <Card id="login-card" className="w-100">
         <Card.Body className="text-white">
           <h2 className="pb-3">Sign Up</h2>
-          
+
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group
@@ -173,7 +172,8 @@ export default function Signup() {
             >
               <Form.Label className="text-white text-white">Email</Form.Label>
               <Form.Control
-                className="text-white bg-dark"
+                id="login-card"
+                className="text-white"
                 type="email"
                 ref={emailRef}
               ></Form.Control>
@@ -186,7 +186,8 @@ export default function Signup() {
                 Password
               </Form.Label>
               <Form.Control
-                className="text-white bg-dark"
+                id="login-card"
+                className="text-white"
                 type="password"
                 ref={passwordRef}
               ></Form.Control>
@@ -197,7 +198,8 @@ export default function Signup() {
             >
               <Form.Label className="text-white">Confirm Password</Form.Label>
               <Form.Control
-                className="text-white bg-dark"
+                id="login-card"
+                className="text-white"
                 type="password"
                 ref={passwordConfirmRef}
               ></Form.Control>

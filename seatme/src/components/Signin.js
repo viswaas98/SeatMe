@@ -127,7 +127,7 @@ export default function Signin() {
   return (
     <>
     
-      <Card id="login-card" className="w-100 bg-dark">
+      <Card id="login-card" className="w-100">
         <Card.Body className="text-white">
           <h2 className="pb-3">Login</h2>
 
@@ -139,7 +139,9 @@ export default function Signin() {
             >
               <Form.Label className="text-white text-white">Email</Form.Label>
               <Form.Control
-                className="text-white bg-dark"
+                id="login-card"
+
+                className="text-white"
                 type="email"
                 ref={emailRef}
               ></Form.Control>
@@ -152,7 +154,8 @@ export default function Signin() {
                 Password
               </Form.Label>
               <Form.Control
-                className="text-white bg-dark"
+                id="login-card"
+                className="text-white"
                 type="password"
                 ref={passwordRef}
               ></Form.Control>
@@ -182,6 +185,9 @@ export default function Signin() {
               />
             </a>
           </Form>
+          <div className="w-100 text-center mt-3">
+            <Link to="/auth/forgot-password">Forgot Password?</Link>
+          </div>
         </Card.Body>
         <div className="w-100 text-center mb-4">
           Need an account? <Link to="/auth/signup"> Sign Up</Link>
