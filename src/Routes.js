@@ -3,6 +3,9 @@ import Signin from "./components/Signin";
 import ForgotPassword from "./components/ForgotPassword";
 import LandingPage from "./LandingPage";
 import Dashboard from "./Dashboard";
+import MainDashboard from "./MainDashboard";
+import HostModal from "./components/Modals/HostModal";
+// import Hostmodal from "./components/Modals/Hostmodal"
 
 const routes = [
   {
@@ -27,9 +30,10 @@ const routes = [
   },
   {
     path: "/dashboard",
-    private: true,
     component: Dashboard,
     routes: [
+      
+
         // {
         // Also note how we added /home before the
         // actual page name just to create a complete path
@@ -43,6 +47,7 @@ const routes = [
         // },
     ],
   },
+  
 ];
 
 export default routes;

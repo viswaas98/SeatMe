@@ -1831,40 +1831,75 @@
    }
    
    .modalwrapper {
-     position: fixed;
-     z-index: 9998;
-     display: none;
-     width: 100%;
-     height: 100vh;
-     -webkit-box-pack: center;
-     -webkit-justify-content: center;
-     -ms-flex-pack: center;
-     justify-content: center;
-     -webkit-box-align: center;
-     -webkit-align-items: center;
-     -ms-flex-align: center;
-     align-items: center;
-     background-color: rgba(0, 0, 0, 0.73);
-   }
+    position: fixed;
+    z-index: 9998;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.73);
+  }
+  .host-modal {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    max-width: 800px;
+    min-width: 600px;
+    padding: 29px 30px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    grid-auto-columns: 1fr;
+    -ms-grid-columns: 0.5fr 1fr;
+    grid-template-columns: 0.5fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    border-radius: 15px;
+    background-color: rgba(52, 54, 71, 0.98);
+    box-shadow: 0 2px 12px 2px rgba(52, 54, 71, 0.98);
+    color: #fff;
+  }
    
-   .modal {
-     display: -ms-grid;
-     display: grid;
-     width: auto;
-     max-width: 800px;
-     min-width: 600px;
-     padding: 29px 30px;
-     grid-auto-columns: 1fr;
-     -ms-grid-columns: 0.5fr 1fr;
-     grid-template-columns: 0.5fr 1fr;
-     -ms-grid-rows: auto;
-     grid-template-rows: auto;
-     border-radius: 15px;
-     background-color: rgba(52, 54, 71, 0.98);
-     box-shadow: 0 2px 12px 2px rgba(52, 54, 71, 0.98);
-     color: #fff;
-   }
-   
+  .modal-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-left: 1px none #6a6a7e;
+  }
+  
    .div-block-50 {
      display: -webkit-box;
      display: -webkit-flex;
@@ -2111,28 +2146,7 @@
      width: 100%;
    }
    
-   .modal-container {
-     display: -webkit-box;
-     display: -webkit-flex;
-     display: -ms-flexbox;
-     display: flex;
-     width: 100%;
-     padding: 5%;
-     -webkit-box-orient: vertical;
-     -webkit-box-direction: normal;
-     -webkit-flex-direction: column;
-     -ms-flex-direction: column;
-     flex-direction: column;
-     -webkit-box-pack: center;
-     -webkit-justify-content: center;
-     -ms-flex-pack: center;
-     justify-content: center;
-     -webkit-box-align: center;
-     -webkit-align-items: center;
-     -ms-flex-align: center;
-     align-items: center;
-     border-left: 1px none #6a6a7e;
-   }
+
    
    .modalseats {
      position: fixed;
@@ -2702,38 +2716,5 @@
      }
    }
 
-     /* Custom stlyes (outside webflow) */
 
-  .hero-container{
-    border-right: 1px solid #fff;
-  }
-  
-  #login-card{
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .body{
-    background-color:#202028;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: stretch !important;
-    justify-content: flex-start !important;
-    border-right: 2px solid #000;
-    background-color: #202028;
-    font-family: "Droid Sans", sans-serif;
-    color: #fff;
-  }
-  
-  .progress-container{
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-block:hover {
-    color: white;
-    text-decoration-color: grey;
-  }
 
-  .card-block.medium:hover {
-    text-decoration-color: grey;
-  }

@@ -1,19 +1,56 @@
 import React from "react";
+
 import { Form, Button, Card, Alert } from "react-bootstrap";
 import PlaceSearch from "../PlaceSearch";
 import SettingSelect from "../SettingSelect";
-import { Link, useHistory, withRouter  } from "react-router-dom";
+import HostStep1 from "./HostStep1";
+import HostStep2 from "./HostStep1";
 
-function HostModal() {
-  function logChange(val) {
-    console.log("Selected: " + val);
-  }
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
+  useHistory,
+  useLocation,
+  withRouter,
+  Switch,
+  Redirect,
+} from "react-router-dom";
+
+function Modal() {
+  let history = useHistory();
+
+  let back = (e) => {
+    e.stopPropagation();
+    history.goBack();
+  };
 
   return (
-    <div className="modalwrapper" >
+    <div
+      // onClick={back}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        position: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        right: 0,
+        background: "rgba(0, 0, 0, 0.65)",
+        zIndex: 4,
+      }}
+    >
       <div className="host-modal">
         <Card id="modal-card" className="w-100">
-          <Card.Body  className="modal-card text-white w-100">
+
+
+
+
+
+
+          <Card.Body className="modal-card text-white w-100">
             <h2 className="pb-3 text-white">Step: 1 of 3</h2>
             <Form className="w-100">
               <Form.Label className="text-white">Location</Form.Label>
@@ -39,20 +76,18 @@ function HostModal() {
 
                 <SettingSelect purpose="place" />
               </Form.Group>
-              <div className="d-flex flex-row justify-content-center align-items-center">
-
-                  <Button variant="danger" id="host-back">
-                    Back
-                  </Button>
-
-
-                <Button variant="secondary" id="host-create-custom">
-                  Create Custom
-                </Button>
-
-                <Button variant="success">Next</Button>
-              </div>
             </Form>
+            <div className="d-flex flex-row justify-content-center align-items-center">
+              <Button onClick={back} variant="danger" id="host-back">
+                Back
+              </Button>
+
+              <Button variant="secondary" id="host-create-custom">
+                Create Custom
+              </Button>
+
+              <Button variant="success">Next</Button>
+            </div>
           </Card.Body>
         </Card>
       </div>
@@ -60,4 +95,4 @@ function HostModal() {
   );
 }
 
-export default (HostModal);
+export default Modal;

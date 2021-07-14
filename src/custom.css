@@ -1,0 +1,179 @@
+/* Custom stlyes (outside webflow) */
+
+.hero-container {
+  border-right: 1px solid #fff;
+}
+
+#login-card {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.body {
+  background-color: #202028;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: stretch !important;
+  justify-content: flex-start !important;
+  border-right: 2px solid #000;
+  background-color: #202028;
+  font-family: "Droid Sans", sans-serif;
+  color: #fff;
+}
+
+.progress-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-block:hover {
+  color: white;
+  text-decoration-color: grey;
+}
+
+.card-block.medium:hover {
+  text-decoration-color: grey;
+}
+
+#modal-card {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* #search-input {
+}
+
+#search-input-box {
+}
+
+#search-input-item {
+} */
+
+#host-create-custom {
+  margin-right: 20px;
+}
+
+#host-back {
+  margin-right: 20px;
+}
+
+#host-date {
+  color: black;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+#host-start-date {
+  margin-right: 20px;
+}
+
+
+
+
+.nav-menu {
+
+  z-index: 1;
+  background-color: #202028;
+  width: 220px;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  /* position: fixed; */
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+  border-right: 1px solid #3a3a45;
+}
+
+.nav-menu.active {
+  display: block;
+  left: 0;
+  transition: 350ms;
+}
+
+#search-button{
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#search-icon{
+  position: absolute;
+  right:0;
+}
+
+
+.sidebar{
+  background-color: #343647;
+
+  width:70px;
+  position: fixed;
+  height: 100%;
+
+}
+
+.sidebar-large{
+  background-color: #343647;
+  z-index: 1;
+  height: 100%;
+
+}
+
+.sidebar-label{
+
+  color: white;
+}
+
+#sidebar-label-link{
+  text-decoration: none;
+
+}
+
+.sidebar-opener{
+  padding: 20px 20px;
+
+}
+
+.sidebar-collapsed-button{
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+
+.sidebar-text{
+  padding-left: 20px;
+}
+
+.menu-bars{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  height: 100%;
+}
+
+#search-bar{
+  background-color: transparent;
+  color: white;
+  border: none;
+  margin: 0;
+  padding:0;
+}
+
+.search-wrapper{
+  padding: 0px 9px !important;
+}
+
+
+
+#toast-container{
+  display: inline;
+  /* position: absolute; */
+  /* top: 0; */
+
+}
+
+.dashboard-title-container{
+  width: 100% !important;
+}

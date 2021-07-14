@@ -7,16 +7,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import RouteWithSubRoutes from "./utils/RouteWithSubRoutes";
 
 const LandingPage = ({ routes }) => {
-  const cards = [
-    {
-      path: "/auth/signin", // the url
-      name: "Signin", // name that appear in Sidebar
-    },
-    {
-      path: "/auth/signin",
-      name: "Signup",
-    },
-  ];
+
   return (
     <div
       id="bgvideo"

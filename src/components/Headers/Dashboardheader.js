@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {Button, Alert} from 'react-bootstrap'
 import {useAuth} from '../../contexts/AuthContext'
 import {Link, useHistory} from 'react-router-dom';
+import Search from '../Search'
 
 const Dashboardheader = () => {
   const [error,setError] = useState('')
@@ -18,7 +19,7 @@ const Dashboardheader = () => {
   }
     return (
         <div className="dashboard-nav-bar">
-          <div className="search-wrapper" />
+          <div className="search-wrapper"><Search/></div>
           <div className="nav-button-wrapper">
             <div className="alert-wrapper">
               <img
@@ -41,7 +42,7 @@ const Dashboardheader = () => {
                 className="profile-icon"
               />
             </div>
-            <Link to="/update-profile" className="btn btn-primary mt-3">Update Profile</Link>
+            
       {error && <Alert variant="danger">{error}</Alert>}
             <Button variant="link" onClick={handleLogout}>Log Out</Button>
           </div>
