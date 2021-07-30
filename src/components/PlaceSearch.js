@@ -13,6 +13,7 @@ function PlaceSearch({ isScriptLoaded, isScriptLoadSucceed }) {
   
     const handleSelect = (value) => {
       setAddress(value)
+      console.log(value);
     }
   
     if (isScriptLoaded && isScriptLoadSucceed) {
@@ -40,7 +41,7 @@ function PlaceSearch({ isScriptLoaded, isScriptLoadSucceed }) {
                 <ul className="list-group" id="search-input-box" > 
                   {loading && <div>Loading...</div>}
                   {suggestions.map((suggestion) => {
-                    const style = suggestion.active
+                    const style = suggestion.activef
                       ? { color:'#000', backgroundColor: "#3a3a45", cursor: "pointer" }
                       : { color:'#000', backgroundColor: '#fff' , cursor: "pointer" };
   

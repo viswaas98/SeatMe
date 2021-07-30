@@ -3,7 +3,7 @@ import { Form, Button, Card, Alert } from "react-bootstrap";
 // import TimePicker from 'react-time-picker';
 import PlaceSearch from "./PlaceSearch";
 import TimePicker from "react-bootstrap-time-picker";
-
+import firebase from '../firebase'
 import SettingSelect from "./SettingSelect";
 import DatePicker from "react-datepicker";
 
@@ -15,7 +15,7 @@ import {
   useLocation,
   Switch,
 } from "react-router-dom";
-function Host() {
+function Host(props) {
   const [startDate, setStartDate] = useState(new Date());
   const [timeStart, setTimeStart] = useState("0");
   const [timeEnd, setTimeEnd] = useState("0");
@@ -30,6 +30,14 @@ function Host() {
     setTimeEnd(timeEnd);
     console.log(timeEnd);
   }
+  // function createhost() {
+  //   const hostRef = firebase.database().ref('hosted-room');
+  //   const hosted_room = {
+  //     title,
+  //     complete:false,
+  //   };
+  //   hostRef.push(hosted_room);
+  // }
   return (
     <div className="dashboard-content-container">
       <div className="dashboard-title-container">
@@ -144,6 +152,8 @@ function Host() {
               variant="success"
               onClick={() => {
                 history.goBack();
+                // createhost();
+                console.log(props.PlaceSearch.address);
               }}
             >
               Save

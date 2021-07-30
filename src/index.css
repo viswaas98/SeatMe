@@ -996,7 +996,7 @@
      display: -ms-flexbox;
      display: flex;
      margin-bottom: 5%;
-     padding-right: 5%;
+     padding-right: 10%;
      padding-left: 5%;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -2448,7 +2448,7 @@
        padding-top: 20px;
        padding-bottom: 20px;
        -webkit-column-count: 4;
-       column-count: 4;
+       column-count: 3;
      }
    
      .div-block-44 {
